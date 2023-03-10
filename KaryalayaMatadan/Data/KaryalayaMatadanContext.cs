@@ -17,5 +17,7 @@ namespace KaryalayaMatadan.Data
         public System.Data.Entity.DbSet<KaryalayaMatadan.Models.Department> Departments { get; set; }
 
         public System.Data.Entity.DbSet<KaryalayaMatadan.Models.Address> Addresses { get; set; }
+
+        public System.Data.Entity.DbSet<KaryalayaMatadan.Models.Role> Roles { get; set; }
     }
 }
