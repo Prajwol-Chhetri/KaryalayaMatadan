@@ -25,9 +25,9 @@ namespace KaryalayaMatadan.Services
                         connection.Open();
                         command.Connection = connection;
                         command.CommandText = String.Format("INSERT INTO employee (employee_name, date_of_birth, phone, email) " +
-                            "VALUES ('{0}','{1}','{2}',{3})",
+                            "VALUES ('{0}','{1}',{2},'{3}')",
                             employee.EmployeeName,
-                            employee.DateOfBirth,
+                            employee.DateOfBirth.ToString("dd-MMM-yyyy"),
                             employee.Phone,
                             employee.Email);
                         command.ExecuteNonQuery();
@@ -75,10 +75,10 @@ namespace KaryalayaMatadan.Services
                     {
                         connection.Open();
                         command.Connection = connection;
-                        command.CommandText = String.Format("UPDATE employee SET employee_name = '{1}', date_of_birth = '{2}', phone = '{3}', email = {4} WHERE employee_id = {0}",
+                        command.CommandText = String.Format("UPDATE employee SET employee_name = '{1}', date_of_birth = '{2}', phone = {3}, email = '{4}' WHERE employee_id = {0}",
                             employee.EmployeeID,
                             employee.EmployeeName,
-                            employee.DateOfBirth,
+                            employee.DateOfBirth.ToString("dd-MMM-yyyy"),
                             employee.Phone,
                             employee.Email);
                         command.ExecuteNonQuery();
