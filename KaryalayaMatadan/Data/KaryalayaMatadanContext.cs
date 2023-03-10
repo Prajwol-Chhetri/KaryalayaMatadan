@@ -21,5 +21,7 @@ namespace KaryalayaMatadan.Data
         public System.Data.Entity.DbSet<KaryalayaMatadan.Models.Role> Roles { get; set; }
 
         public System.Data.Entity.DbSet<KaryalayaMatadan.Models.JobHistory> JobHistories { get; set; }
+
+        public System.Data.Entity.DbSet<KaryalayaMatadan.Models.EmployeeJobHistory> EmployeeJobHistories { get; set; }
     }
 }
