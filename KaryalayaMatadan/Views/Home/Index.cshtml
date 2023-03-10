@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.Title = "Home Page";
 }
 
@@ -15,6 +15,11 @@
                 <h4 class="font-weight-bold">Basic Web Forms</h4>
             </div>
             <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Employees" }, Request.Url.Scheme)">
+                        <span>Employees</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
