@@ -45,15 +45,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(JobHistory employee)
         {
-            try
-            {
-                jobHistoryService.AddJobHistory(employee);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            jobHistoryService.AddJobHistory(employee);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: JobHistories/Edit/5
@@ -70,15 +63,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(JobHistory employee)
         {
-            try
-            {
-                jobHistoryService.EditJobHistory(employee);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            jobHistoryService.EditJobHistory(employee);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: JobHistories/Delete/5
@@ -93,15 +79,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                jobHistoryService.DeleteJobHistory(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            jobHistoryService.DeleteJobHistory(id);
+            return RedirectToAction(nameof(Index));
         }
 
         protected override void Dispose(bool disposing)

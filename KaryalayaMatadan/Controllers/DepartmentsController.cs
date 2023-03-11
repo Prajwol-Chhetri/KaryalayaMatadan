@@ -45,15 +45,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Department department)
         {
-            try
-            {
-                departmentService.AddDepartment(department);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            departmentService.AddDepartment(department);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Departments/Edit/5
@@ -70,15 +63,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Department department)
         {
-            try
-            {
-                departmentService.EditDepartment(department);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            departmentService.EditDepartment(department);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Departments/Delete/5
@@ -93,15 +79,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                departmentService.DeleteDepartment(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            departmentService.DeleteDepartment(id);
+            return RedirectToAction(nameof(Index));
         }
 
         protected override void Dispose(bool disposing)

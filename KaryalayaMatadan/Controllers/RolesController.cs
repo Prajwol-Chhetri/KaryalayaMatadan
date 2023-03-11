@@ -45,15 +45,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Role role)
         {
-            try
-            {
-                roleService.AddRole(role);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            roleService.AddRole(role);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Roles/Edit/5
@@ -70,15 +63,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Role role)
         {
-            try
-            {
-                roleService.EditRole(role);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            roleService.EditRole(role);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Roles/Delete/5
@@ -93,15 +79,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                roleService.DeleteRole(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            roleService.DeleteRole(id);
+            return RedirectToAction(nameof(Index));
         }
 
         protected override void Dispose(bool disposing)

@@ -45,15 +45,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Address address)
         {
-            try
-            {
-                addressService.AddAddress(address);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            addressService.AddAddress(address);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Addresses/Edit/5
@@ -70,15 +63,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Address address)
         {
-            try
-            {
-                addressService.EditAddress(address);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            addressService.EditAddress(address);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Addresses/Delete/5
@@ -93,15 +79,8 @@ namespace KaryalayaMatadan.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                addressService.DeleteAddress(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-                return View();
-            }
+            addressService.DeleteAddress(id);
+            return RedirectToAction(nameof(Index));
         }
 
         protected override void Dispose(bool disposing)
