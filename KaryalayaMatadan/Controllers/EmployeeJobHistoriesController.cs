@@ -18,9 +18,14 @@ namespace KaryalayaMatadan.Controllers
         EmployeeJobHistoryService employeeJobHistoryService = new EmployeeJobHistoryService();
 
         // GET: EmployeeJobHistories
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             IEnumerable<EmployeeJobHistory> employeeJobHistories = employeeJobHistoryService.GetEmployeeJobHistories();
+            // applying search filter on employees
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                employeeJobHistories = employeeJobHistories.Where(s => s.Name.Contains(searchString));
+            }
             return View(employeeJobHistories);
         }
 

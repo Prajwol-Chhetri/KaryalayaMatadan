@@ -18,9 +18,14 @@ namespace KaryalayaMatadan.Controllers
         VotingRecordService votingRecordService = new VotingRecordService();
 
         // GET: VotingRecords
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             IEnumerable<VotingRecord> votingRecords = votingRecordService.GetVotingRecords();
+            // applying search filter on employees
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                votingRecords = votingRecords.Where(s => s.VoterID == Convert.ToInt32(searchString));
+            }
             return View(votingRecords);
         }
 

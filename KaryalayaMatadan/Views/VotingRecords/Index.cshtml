@@ -6,7 +6,13 @@
 }
 
 <h2>Index</h2>
-
+@using (Html.BeginForm())
+{
+    <p>
+        Find by Voter ID: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -42,42 +48,43 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoteID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CandidateID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CandidateName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CandidateEmail)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoterID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoterName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoterEmail)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoteYear)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoteMonth)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.VoteDate)
-    </td>
-    <td>
-        @Html.ActionLink("Details", "Details", new { id = item.VoteID })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoterID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoterEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoteYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoteMonth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoteDate)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.VoteID })
+            </td>
+        </tr>
+    }
 
 </table>
