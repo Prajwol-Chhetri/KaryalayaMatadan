@@ -124,6 +124,7 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobHistoriesController.cs" />
+    <Compile Include="Controllers\MonthlyCandidatesController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\VotingRecordsController.cs" />
     <Compile Include="Data\KaryalayaMatadanContext.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeJobHistory.cs" />
     <Compile Include="Models\JobHistory.cs" />
+    <Compile Include="Models\MonthlyCandidate.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\VotingRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Services\EmployeeJobHistoryService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\JobHistoryService.cs" />
+    <Compile Include="Services\MonthlyCandidateService.cs" />
     <Compile Include="Services\RoleService.cs" />
     <Compile Include="Services\VotingRecordService.cs" />
   </ItemGroup>
@@ -219,6 +222,7 @@
     <Content Include="Views\EmployeeJobHistories\Index.cshtml" />
     <Content Include="Views\VotingRecords\Details.cshtml" />
     <Content Include="Views\VotingRecords\Index.cshtml" />
+    <Content Include="Views\MonthlyCandidates\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
