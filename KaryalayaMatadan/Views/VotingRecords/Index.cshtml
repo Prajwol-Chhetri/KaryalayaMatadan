@@ -1,0 +1,83 @@
+﻿@model IEnumerable<KaryalayaMatadan.Models.VotingRecord>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VoteID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CandidateEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoterID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoterName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoterEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoteYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoteMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoteDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoteID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CandidateID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CandidateName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CandidateEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoterID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoterName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoterEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoteYear)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoteMonth)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VoteDate)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = item.VoteID })
+    </td>
+</tr>
+}
+
+</table>

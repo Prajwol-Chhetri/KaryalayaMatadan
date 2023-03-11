@@ -1,0 +1,98 @@
+﻿@model KaryalayaMatadan.Models.VotingRecord
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VotingRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VoteID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoteID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandidateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandidateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandidateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandidateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CandidateEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CandidateEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoterID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoterID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoterEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoterEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoteYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoteYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoteMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoteMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VoteDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VoteDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
